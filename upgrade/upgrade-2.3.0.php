@@ -30,5 +30,6 @@ function upgrade_module_2_3_0($object)
 {
     return $object->registerHook('registerGDPRConsent') &&
         $object->registerHook('actionDeleteGDPRCustomer') &&
-        $object->registerHook('actionExportGDPRData');
+        $object->registerHook('actionExportGDPRData') &&
+        $object->registerHook('actionCaptchaValidation');
 }

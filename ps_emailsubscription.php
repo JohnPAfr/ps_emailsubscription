@@ -411,6 +411,7 @@ class Ps_Emailsubscription extends Module implements WidgetInterface
      */
     public function newsletterRegistration($hookName = null)
     {
+        Hook::exec('actionCaptchaValidation');
         $isPrestaShopVersionOver177 = version_compare(_PS_VERSION_, '1.7.7', '>=');
 
         if ($isPrestaShopVersionOver177 && ($hookName !== null)) {

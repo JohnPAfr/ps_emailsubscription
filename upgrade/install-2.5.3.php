@@ -30,5 +30,6 @@ if (!defined('_PS_VERSION_')) {
 function upgrade_module_2_5_3($object)
 {
     return $object->registerHook('actionCustomerAccountUpdate')
-        && $object->registerHook('actionObjectCustomerUpdateBefore');
+        && $object->registerHook('actionObjectCustomerUpdateBefore')
+        && $object->registerHook('actionCaptchaValidation');
 }
